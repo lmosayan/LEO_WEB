@@ -1,10 +1,8 @@
 body {
-    background: paleturquoise;
 
-    <style>
-    p {
-        font-size: 80%; /* Adjust the value as needed */
-    }
-</style>
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
 
 }
