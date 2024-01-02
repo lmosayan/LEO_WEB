@@ -16,12 +16,43 @@
             display: inline-block;
         }
     </style>
+    <script>
+        function updateTimesAndDates() {
+          var manilaOptions = { timeZone: 'Asia/Manila', year: 'numeric', month: 'long', day: 'numeric' };
+          var calgaryOptions = { timeZone: 'America/Edmonton', year: 'numeric', month: 'long', day: 'numeric' };
+          var irelandOptions = { timeZone: 'Europe/Dublin', year: 'numeric', month: 'long', day: 'numeric' };
+    
+          var manilaTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Manila' });
+          var calgaryTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Edmonton' });
+          var irelandTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Europe/Dublin' });
+    
+          var manilaDate = new Date().toLocaleDateString('en-US', manilaOptions);
+          var calgaryDate = new Date().toLocaleDateString('en-US', calgaryOptions);
+          var irelandDate = new Date().toLocaleDateString('en-US', irelandOptions);
+    
+          document.getElementById('manila-time').textContent = 'Manila Time: ' + manilaTime + ' | Date: ' + manilaDate;
+          document.getElementById('calgary-time').textContent = 'Calgary Time: ' + calgaryTime + ' | Date: ' + calgaryDate;
+          document.getElementById('ireland-time').textContent = 'Ireland Time: ' + irelandTime + ' | Date: ' + irelandDate;
+        }
+    
+        // Update the times and dates every second
+        setInterval(updateTimesAndDates, 1000);
+    
+        // Initial call to display the times and dates immediately
+        updateTimesAndDates();
+      </script>
 
 </head>
 
 <Body>
     <header>
         <h2 class="logo"> LEO OSAYAN </h2>
+
+        <div class="time">
+            <p id="manila-time"></p>
+            <p id="calgary-time"></p>
+            <p id="ireland-time"></p>
+        </div>
         <nav class="navigation">
             <a href="#">Home</a>
             <a href="#">About</a>
