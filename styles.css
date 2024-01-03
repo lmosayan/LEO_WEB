@@ -286,9 +286,9 @@ header {
 }
 
 .time {
-    width: 300px;
+    width: 500px;
     height: 70px;
-    font-size:.5em;
+    font-size:.8em;
     color: #fff;
     user-select: None;
     backdrop-filter: blur(2px);
