@@ -284,3 +284,15 @@ header {
 .login-register p a:hover {
     text-decoration: underline;
 }
+
+.time {
+    width: 300px;
+    height: 70px;
+    font-size:.5em;
+    color: #fff;
+    user-select: None;
+    backdrop-filter: blur(2px);
+    text-align: left;
+    height: fit-content;
+
+}
