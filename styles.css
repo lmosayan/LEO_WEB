@@ -286,13 +286,13 @@ header {
 }
 
 .time {
-    width: 300px;
+    width: 600px;
     height: 70px;
-    font-size:.6em;
+    font-size:1em;
     color: #fff;
     user-select: None;
     backdrop-filter: blur(2px);
-    text-align: left;
     height: fit-content;
+    text-align: center;
 
 }
